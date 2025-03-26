@@ -1,23 +1,112 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title></title>
-<style>
-body{background-color: rgba(0,0,0,1.00)}
-.dian {
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
-    height: 100vh;           /* 父容器占满视口高度 */
-a:link { color: black ; } /* 未访问的链接 */
-a:visited { color: black; } /* 已访问的链接 */
-a:hover { color: black; transform: scale(1.05);} /* 鼠标悬停时的链接 */
-a:active { color: black; } /* 选定的链接 */
-</style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 页面未找到</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c3e50;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #7f8c8d;
+        }
+
+        .illustration {
+            width: 300px;
+            margin: 2rem auto;
+            opacity: 0.9;
+        }
+
+        .actions {
+            margin-top: 2rem;
+        }
+
+        .home-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .home-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52,152,219,0.3);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .illustration {
+                width: 200px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
 <body>
-<div class="dian"><a href="https://umhome.github.io/index/" style="color: white;">.</a></div>
+    <div class="container">
+        <div class="error-code">404</div>
+        <svg class="illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#3498db" d="M50 100h100v20H50z"/>
+            <circle cx="100" cy="70" r="40" fill="#3498db"/>
+            <path fill="none" stroke="#3498db" stroke-width="5" 
+                  d="M30 170l20-20m120 0l20 20M70 170l15-30m60 0l15 30"/>
+            <circle cx="85" cy="60" r="8" fill="#fff"/>
+            <circle cx="115" cy="60" r="8" fill="#fff"/>
+        </svg>
+        <h1 class="error-message">哎呀！页面走丢了</h1>
+        <p>您访问的页面可能已经离开地球表面，或者从未存在过。</p>
+        <p>请检查网址是否正确，或通过以下方式返回：</p>
+        <div class="actions">
+            <a href="https://umhome.github.io/index/" class="home-btn"></a>
+        </div>
+    </div>
 </body>
 </html>

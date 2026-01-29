@@ -3,102 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - 页面未找到</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
         }
-
         body {
-            background: #f8f9fa;
-            min-height: 100vh;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: #2c3e50;
+            min-height: 100vh;
+            background-color: #252525;
+            padding: 20px;
         }
-
         .container {
+            width: 100%;
+            max-width: 600px; /* 增加容器宽度 */
             text-align: center;
-            padding: 2rem;
-            max-width: 800px;
         }
-
-        .error-code {
-            font-size: 8rem;
-            font-weight: 700;
-            color: #3498db;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
+        h1 {
+            color: #FFFFFF;
+            margin-bottom: 10px;
+		}
+		p {
+            color: #FFFFFF;
+            margin-bottom: 10px;
+			font-size: 12px;
+		}
+        .link-box {
+            display: flex;
+            flex-wrap: wrap; /* 允许换行 */
+            gap: 12px;
+            width: 100%;
+			margin-bottom: 10px;
         }
-
-        .error-message {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #7f8c8d;
-        }
-
-        .illustration {
-            width: 300px;
-            margin: 2rem auto;
-            opacity: 0.9;
-        }
-
-        .actions {
-            margin-top: 2rem;
-        }
-
-        .home-btn {
-            background: #3498db;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
+        a {
+            flex: 1 1 calc(50% - 6px); /* 双列布局计算 */
+            padding: 15px;
+            background-color: #000000;
+            color: #4285f4;
             text-decoration: none;
-            display: inline-block;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            font-size: 16px;
+            text-align: center; /* 文字居中 */
         }
-
-        .home-btn:hover {
-            background: #2980b9;
+        a:hover {
+            background-color: #4285f4;
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52,152,219,0.3);
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @media (max-width: 768px) {
-            .error-code {
-                font-size: 6rem;
-            }
-            
-            .illustration {
-                width: 200px;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-		<h1 class="error-message">哎呀！页面走丢了</h1>
-		<p>您访问的页面可能已经离开地球表面，或者从未存在过。</p>
-        <p>请检查网址是否正确...</p>
-        <div class="error-code">404</div>
-        <div class="actions">
-            <a href="https://umhome.github.io/index/" class="home-btn"></a>
-        </div>
-    </div>
+        <div class="link-box">
+			<a href="https://lwabe.com/" target="_blank">国产</a>
+			<a href="https://javxx.to/cn" target="_blank">日产</a>
+		</div>
+			<p>建议电脑端使用，手机广告弹窗较多</p>
+	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
